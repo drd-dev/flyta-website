@@ -1,4 +1,4 @@
-# flyta
+# flyta-website
 
 ## Project setup
 ```
