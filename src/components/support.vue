@@ -1,6 +1,6 @@
 <template>
   <div class="support">
-    <div class="header2 light">
+    <div class="header2 dark">
       Support
     </div>  
     <div class="contact bodyText">
@@ -29,10 +29,11 @@ export default {
 
 
   .support{
-    color: white;
+    background-color: white;
+    color: $dark;
     text-align: center;
     margin: 0 auto;
-    padding-top: 200px;
+    margin-top: 200px;
     font-family: 'Optician-Sans';
   }
 
