@@ -37,7 +37,4 @@ export default {
     font-family: 'Optician-Sans';
   }
 
-  .contact{
-  }
-
 </style>

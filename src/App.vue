@@ -13,9 +13,36 @@
       <img   src="./assets/appStore.svg" alt="appStore Logo">
     </a>
     
-    
-    <iframe  class="video" :class="{ 'video-mobile':isMobile }" width="560" height="315" src="https://www.youtube-nocookie.com/embed/IJun4CwX6rM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <Support class="support"/>
+    <div class="body" :class="{ 'body-mobile':isMobile }">
+      <div class="body-container">
+        <div id="text">
+          <p>Flyta is an incredibly difficult game with simple controls.</p>
+          <p>Help a lost spaceman get back home by traveling through 40 difficult levels, each with their own unique challenges to overcome.</p>
+          <br>
+          <div class="featured">
+            <p class="bold">Featuring:</p>
+            <p>- One-touch controls</p>
+            <p>- 40 Unique levels</p>
+            <p>- Difficult gameplay</p>
+            <p>- Optional collectables</p>
+            <p>- Original soundtrack</p>
+          </div>
+
+        </div>
+        <div class="video">
+          <iframe width="315" height="560" src="https://www.youtube-nocookie.com/embed/IJun4CwX6rM"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="screenshots">
+      <img src="./assets/screenshots/ipad_1.png" alt="FLYTA game screenshot">
+      <img src="./assets/screenshots/ipad_2.png" alt="FLYTA game screenshot">
+      <img src="./assets/screenshots/ipad_3.png" alt="FLYTA game screenshot">
+      <img src="./assets/screenshots/ipad_4.png" alt="FLYTA game screenshot">
+        <img src="./assets/screenshots/ipad_5.png" alt="FLYTA game screenshot">
+    </div>
+
+    <Support class="support" :class="{ 'support-mobile':isMobile }"/>
     <div class="footer">
       <p>2019 Dylan Dougherty</p>
 
@@ -186,33 +213,111 @@ a{
 
 }
 
-
-.video{
-  padding-top: 80px;
-  display:block;
+.body{
   margin: 0 auto;
-  width: 25%;
+  padding: 30px;
+  margin-top: 100px;
+  border-radius: 2%;
+  width: 50%;
+  background-color: $light;
+  color:$dark;
+  font-family: 'poppins';
+  .body-container{
+    display:flex;
+  }
+  .text{
+    text-align: left;
+    .featured{
+      margin-left: 50px;
+    }
+  }
+  .bold{
+    font-family: 'optician-sans';
+    color: $primary;
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+  .video{
+  width: 315px;
+  height: 560px;
+  iframe{
+    border: none;
+    border-radius: 2%;
+    }
+  }
 }
-.video-mobile{
-  width: 100%;
+
+.body-mobile{
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 100px;
+  border-radius: 1%;
+  width: 90%;
+  background-color: $light;
+  color:$dark;
+  font-family: 'poppins';
+  .body-container{
+    display:flex;
+    flex-direction: column;
+  }
+  .text{
+    text-align: left;
+    .featured{
+      margin-left: 0px;
+    }
+  }
+  .bold{
+    font-family: 'optician-sans';
+    color: $primary;
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+  .video{
+  width: 315px;
+  height: 560px;
+  iframe{
+    border: none;
+    border-radius: 2%;
+    }
+  }
 }
+
+.screenshots{
+  margin: 0 auto;
+  margin-top: 80px;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  img{
+    padding: 5px;
+    width: 200px;
+    height: 267px;
+    border-radius: 5%;
+  }
+} 
 
 #app {
   height: 100%;
   width: 100%;
 }
 
-.Support{
+.support{
   height: 100%;
-  height: 100%;
-  width: 100%;
-
+  border-radius: 0%;
+  width: 50%;
+}
+.support-mobile{
+   width: 90%; 
 }
 .footer {
-  padding-top: 100px;
+  margin-top: 100px;
+  padding-top: 7px;
+   padding-bottom: 7px;
   font-family: 'optician-sans';
   width: 100%;
   color: white;
+  background-color: $dark;
   text-align: left;
 
   p{
