@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img class="logo" :class="{ 'logo-mobile':isMobile }" src="./assets/Logo.png" alt="FLYTA logo">
-    <p class="subtitle" :class="{'subtitle-mobile':isMobile}">Available now on iOS!</p>
+    <p class="subtitle" :class="{'subtitle-mobile':isMobile}">Available now on iOS and Android!</p>
     <img class="asteroid spin-med spin-rev" v-if="!isMobile" style="width: 200px; top: 250px; left: 500px;" src="./assets/asteroids/asteroid6.svg" alt="asteroid">
     <img class="asteroid spin-med spin-rev" v-if="isMobile" style="width: 100px; top: 270px; left: -5px;" src="./assets/asteroids/asteroid6.svg" alt="asteroid">
     <img class="asteroid spin-slow"  v-if="!isMobile" style="width: 200px; top: 600px; left: 1200px;" src="./assets/asteroids/asteroid8.svg" alt="asteroid">
@@ -9,10 +9,12 @@
     <img class="cargo spin-fast" v-if="!isMobile" style="width: 100px;" src="./assets/cargo.svg" alt="cargo">
     <img class="cargo spin-fast" v-if="isMobile" style="width: 50px; top:400; left: 10px;" src="./assets/cargo.svg" alt="cargo">
     <img class="spaceMan" :class="{ 'spaceMan-mobile':isMobile }" src="./assets/spaceMan.svg" alt="spaceman">
-    <a  class="appStore" :class="{ 'appStore-mobile':isMobile }" href="https://apps.apple.com/us/app/flyta/id1478797241?ls=1">
-      <img   src="./assets/appStore.svg" alt="appStore Logo">
-    </a>
     
+      <a  class="appStore" :class="{ 'appStore-mobile':isMobile }" href="https://apps.apple.com/us/app/flyta/id1478797241?ls=1">
+          <img   src="./assets/appStore.svg" alt="appStore Logo">
+      </a>
+      <a class="playStore" :class="{ 'playStore-mobile':isMobile }" href='https://play.google.com/store/apps/details?id=com.zeoxo.FLYTA&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>   
+  
     <div class="body" :class="{ 'body-mobile':isMobile }">
       <div class="body-container">
         <div id="text">
@@ -148,7 +150,20 @@ a{
   width: 50%;
 }
 
+.stores{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .appStore{
+  margin-top: 30px;
+  padding: 0px;
+  margin: 0px;
     img{
       width: 10%;
     }
@@ -157,6 +172,19 @@ a{
 .appStore-mobile{
     img{
       width: 50%;
+    }
+}
+
+.playStore{
+    padding: 0px;
+    img{
+      width: 12%;
+    }
+}
+
+.playStore-mobile{
+    img{
+      width: 56%;
     }
 }
 
